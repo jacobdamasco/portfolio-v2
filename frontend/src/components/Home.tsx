@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa";
 const Home: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col w-screen overflow-auto md:flex-row md:min-h-screen">
+      <div className="flex flex-col w-full h-screen md:flex-row md:min-h-screen">
         <div className="flex flex-col flex-10 gap-10 md:gap-11 lg:gap-12 md:justify-center p-12 md:p-0">
           {/* info text */}
           <div className="flex flex-col md:px-10 lg:px-14 gap-4 md:gap-6 lg:gap-8">
@@ -33,8 +33,8 @@ const Home: React.FC = () => {
         {/* Right panel med+ */}
 
         {/* Right panel med screens */}
-        <div className="h-screen w-screen md:w-[50%] p-2">
-          <div className="flex h-[67%] gap-2 pb-2">
+        <div className="flex flex-10 flex-col gap-2 p-2 h-[100%]">
+          <div className="flex h-[67%] gap-2">
             <div className="flex flex-col w-[70%] gap-2">
               <motion.img 
                 src="imgs/tech.jpg" 
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
               />
             </div>
           </div>
-          <div className="flex h-[33%] gap-2">
+          <div className="flex w-full h-[33%] gap-2 md:pb-0 lg:pb-2">
             <motion.img 
               src="imgs/plane.jpg" 
               alt="6" 
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}    // fade in & move up
               transition={{ duration: 1, ease: "easeIn", delay: 1 }}  
             />
-            <div className="flex-2 overflow-hidden">
+            <div className="flex flex-3 overflow-hidden">
               <motion.img
                 src="/imgs/family-2.jpg"
                 alt="8"
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
             <motion.img 
               src="imgs/pastries.jpg" 
               alt="7" 
-              className="flex-1 object-cover"
+              className="hidden md:flex flex-1 object-cover"
               initial={{ opacity: 0 }}   // start hidden & slightly below
               animate={{ opacity: 1 }}    // fade in & move up
               transition={{ duration: 1, ease: "easeIn", delay: 1.5 }}  
